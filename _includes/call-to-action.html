@@ -3,15 +3,17 @@
         text-align: left;
         padding-left: 0;
         list-style-position: inside;
-        font-size: 1.2em; /* Increase font size */
+        font-size: 1.3em; /* Increase font size */
+        width: 100%;
     }
     .left-aligned-list li {
         display: flex;
         justify-content: flex-start;
+        align-items: baseline; /* Ensure the text is aligned properly */
     }
     .left-aligned-list li span.date {
         display: inline-block;
-        width: 180px; /* Adjust the width as needed */
+        min-width: 180px; /* Adjust the width as needed */
         padding-right: 10px; /* Space between date and text */
         white-space: nowrap; /* Prevent date from wrapping */
     }
@@ -31,9 +33,6 @@
                     <li><span class="date">04.2017 - 11.2017</span>Master Thesis @ iTHINx GmbH, Germany</li>
                     <li><span class="date">01.2017 - 03.2017</span>Research Assistant @ University of Duisburg-Essen, Germany</li>
                     <li><span class="date">11.2015 - 12.2016</span>Junior Developer @ BuyIn GmbH, Germany</li>
-                    <li><span class="date"> </span> </li>
-                    <li><span class="date"> </span> </li>
-                    <li><span class="date"> </span> </li>
                 </ul>
                 <h2 class="section-heading">My Academic Journey</h2>
                 <hr class="light">
@@ -49,4 +48,3 @@
         </div>
     </div>
 </section>
-
