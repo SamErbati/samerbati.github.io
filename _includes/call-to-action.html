@@ -9,15 +9,20 @@
         flex-direction: column;
         align-items: flex-start;
     }
+    .left-aligned-list li span.company {
+        display: inline-block;
+        width: 200px; /* Adjust the width as needed */
+        padding-right: 10px; /* Space between company name and date */
+        font-weight: bold; /* Bold the company name for better visibility */
+    }
     .left-aligned-list li span.date {
         display: inline-block;
         width: 100px; /* Adjust the width as needed */
-        padding-right: 10px; /* Space between date and text */
-        font-weight: bold; /* Bold the dates for better visibility */
+        padding-left: 10px; /* Space between date and company name */
     }
     .left-aligned-list li span.text {
         display: inline-block;
-        width: calc(100% - 120px); /* Adjust the width as needed */
+        width: calc(100% - 320px); /* Adjust the width as needed */
     }
     .left-aligned-list ul {
         padding-left: 20px; /* Indentation for sub-bullet points */
@@ -32,27 +37,27 @@
                 <hr class="light">
                 <ul class="left-aligned-list text-faded">
                     <li>
-                        <span class="date">2023-2018</span><span class="text">Dr.-Ing. Computer Science, Duisburg-Essen University, Germany</span>
+                        <span class="company">Duisburg-Essen University</span><span class="date">2023-2018</span><span class="text">Dr.-Ing. Computer Science</span>
                         <ul>
                             <li>Project 1: Optimizing Network Functions</li>
                             <li>Project 2: AI in Telecommunications</li>
                         </ul>
                     </li>
                     <li>
-                        <span class="date">2014-2017</span><span class="text">M.Sc. Embedded Systems Engineering, Duisburg-Essen University, Germany</span>
+                        <span class="company">Duisburg-Essen University</span><span class="date">2014-2017</span><span class="text">M.Sc. Embedded Systems Engineering</span>
                         <ul>
                             <li>Project 1: IoT Systems Development</li>
                             <li>Project 2: Embedded System Optimization</li>
                         </ul>
                     </li>
                     <li>
-                        <span class="date">2014</span><span class="text">Moved to Germany</span>
+                        <span class="company">Personal</span><span class="date">2014</span><span class="text">Moved to Germany</span>
                         <ul>
                             <li>Project 1: Cultural Integration Initiatives</li>
                         </ul>
                     </li>
                     <li>
-                        <span class="date">2006-2010</span><span class="text">B.Sc. Biomedical Engineering (Bioelectric), QIAU University, Iran</span>
+                        <span class="company">QIAU University</span><span class="date">2006-2010</span><span class="text">B.Sc. Biomedical Engineering (Bioelectric)</span>
                         <ul>
                             <li>Project 1: Biomedical Signal Processing</li>
                             <li>Project 2: Medical Device Innovation</li>
