@@ -1,26 +1,4 @@
-<style>
-    .left-aligned-list {
-        text-align: left;
-        padding-left: 0;
-        list-style-position: inside;
-        font-size: 1.2em; /* Increase font size */
-    }
-    .left-aligned-list li {
-        display: flex;
-        justify-content: flex-start;
-    }
-    .left-aligned-list li span.date {
-        display: inline-block;
-        width: 150px; /* Adjust the width as needed */
-        padding-right: 10px; /* Space between date and text */
-        white-space: nowrap; /* Prevent date from wrapping */
-    }
-    .section {
-        margin-bottom: 0; /* Remove space between sections */
-    }
-</style>
-
-<section class="bg-primary section" id="professional">
+<aside class="bg-dark section" id="professional">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -36,5 +14,31 @@
             </div>
         </div>
     </div>
-</section>
+</aside>
+
+<style>
+    .bg-dark {
+        background-color: #343a40;
+        color: #ffffff;
+    }
+    .left-aligned-list {
+        text-align: left;
+        padding-left: 0;
+        list-style-position: inside;
+        font-size: 1.2em; /* Increase font size */
+    }
+    .left-aligned-list li {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+    .left-aligned-list li span.date {
+        display: inline-block;
+        width: 150px; /* Adjust the width as needed */
+        padding-right: 10px; /* Space between date and text */
+        white-space: nowrap; /* Prevent date from wrapping */
+    }
+    .section {
+        margin-bottom: 0; /* Remove space between sections */
+    }
 </style>
