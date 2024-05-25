@@ -4,6 +4,15 @@
         padding-left: 0;
         list-style-position: inside;
     }
+    .left-aligned-list li {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .left-aligned-list li span.date {
+        display: inline-block;
+        width: 100px; /* Adjust the width as needed */
+        padding-right: 10px; /* Space between date and text */
+    }
 </style>
 
 <section class="bg-primary" id="about">
@@ -13,10 +22,10 @@
                 <h2 class="section-heading">More about me</h2>
                 <hr class="light">
                 <ul class="left-aligned-list text-faded">
-                    <li>2018 - 2024     Dr.-Ing. Computer Science, Duisburg-Essen University, Germany</li>
-                    <li>2014 - 2017     M.Sc. Embedded Systems Engineering, Duisburg-Essen University, Germany</li>
-                    <li>2014            Moved to Germany</li>
-                    <li>2006 - 2010     B.Sc. Biomedical Engineering (Bioelectric), QIAU University, Iran</li>
+                    <li><span class="date">2023-2018</span>Dr.-Ing. Computer Science, Duisburg-Essen University, Germany</li>
+                    <li><span class="date">2014-2017</span>M.Sc. Embedded Systems Engineering, Duisburg-Essen University, Germany</li>
+                    <li><span class="date">2014</span>Moved to Germany</li>
+                    <li><span class="date">2006-2010</span>B.Sc. Biomedical Engineering (Bioelectric), QIAU University, Iran</li>
                 </ul>
                 <a href="#" class="btn btn-default btn-xl">Get Started!</a>
             </div>
