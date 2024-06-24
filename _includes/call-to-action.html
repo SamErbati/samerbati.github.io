@@ -3,72 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional and Academic Journey</title>
+    <title>Projects and Publications</title>
     <style>
-        .left-aligned-list {
-            text-align: left;
-            padding-left: 0;
-            list-style-position: inside;
-            font-size: 1.3em; /* Increase font size */
-            width: 100%;
+        body {
+            background-color: hsl(0, 5%, 5%);
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
         }
-        .left-aligned-list li {
-            display: flex;
-            justify-content: flex-start;
-            align-items: baseline; /* Ensure the text is aligned properly */
+        h1 {
+            font-size: 24px;
         }
-        .left-aligned-list li span.date {
-            display: inline-block;
-            min-width: 180px; /* Adjust the width as needed */
-            padding-right: 10px; /* Space between date and text */
-            white-space: nowrap; /* Prevent date from wrapping */
+        h2 {
+            font-size: 20px;
+            margin-top: 40px;
         }
-        .section {
-            margin-bottom: 0; /* Remove space between sections */
+        .project-list, .publication-list {
+            list-style-type: none;
+            padding: 0;
         }
-        .bg-primary {
-            background-color: black; /* Set background color to black */
-            color: white; /* Set text color to white for better readability */
+        .project-item, .publication-item {
+            margin-bottom: 20px;
         }
-        .section-heading {
-            margin-top: 50px; /* Add space above section headings */
-            margin-bottom: 30px; /* Add space below section headings */
+        .project-item a, .publication-item a {
+            color: #1E90FF;
+            text-decoration: none;
         }
-        .intro-text {
-            margin-bottom: 50px; /* Add space below the introduction text */
+        .project-item a:hover, .publication-item a:hover {
+            text-decoration: underline;
+        }
+        .category {
+            list-style-type: circle;
+            margin-left: 20px;
+        }
+        .category-item {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-<section class="bg-primary section" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Welcome to my personal website!</h2>
-                <p class="intro-text">I am Sam Erbati, an enthusiastic researcher based in Germany with a deep-seated passion for Artificial Intelligence (AI), Machine Learning (ML), Data Science, and optimization methodologies.</p>
-                <p class="intro-text">I completed my Ph.D. in Computer Science at the University of Duisburg-Essen in Germany, where I focused on advancing the frontiers of knowledge in my areas of expertise. My academic journey and professional experiences have equipped me with a robust understanding of cutting-edge technologies and their applications in solving complex problems.</p>
-                
-                
-                <h2 class="section-heading">My Professional Journey</h2>
-                <hr class="light">
-                <ul class="left-aligned-list text-faded">
-                    <li><span class="date">12.2017 - Present</span>Senior Solution Designer | Data Scientist | AI | ML @ Deutsche Telekom, Germany</li>
-                    <li><span class="date">04.2017 - 11.2017</span>Junior Developer @ iTHINx GmbH, Germany</li>
-                    <li><span class="date">01.2017 - 03.2017</span>Research Assistant @ University of Duisburg-Essen, Germany</li>
-                    <li><span class="date">11.2015 - 12.2016</span>Junior Developer @ BuyIn GmbH, Germany</li>
-                </ul>
-                <h2 class="section-heading">My Academic Journey</h2>
-                <hr class="light">
-                <ul class="left-aligned-list text-faded">
-                    <li><span class="date">11.2018 - 01.2024</span>Ph.D. Computer Science, University of Duisburg-Essen, Germany</li>
-                    <li><span class="date">10.2014 - 10.2017</span>M.Sc. Embedded Systems Engineering, University of Duisburg-Essen, Germany</li>
-                    <li><span class="date">08.2006 - 08.2010</span>B.Sc. Biomedical Engineering (Bioelectric), University of QIAU, Iran</li>
-                </ul>             
-                
-                <a href="#" class="btn btn-default btn-xl">Get Started!</a>
-            </div>
-        </div>
-    </div>
-</section>
+    <h1>Projects</h1>
+    <ul class="project-list">
+        <h2>AI Projects</h2>
+        <ul class="category">
+            <li class="category-item">RAG-Chatbot Development: Developed a Retrieval-Augmented Generation (RAG) chatbot capable of providing more accurate and contextually relevant responses by combining retrieval-based and generative models.</li>
+            <li class="category-item">Image Captioning with Generative AI: Implemented a generative AI model that can automatically generate descriptive captions for images, enhancing accessibility and user experience.</li>
+            <li class="category-item">ChatGPT-like Website: Created a website similar to ChatGPT, enabling users to interact with an advanced conversational AI for various applications, including customer service and personal assistance.</li>
+            <li class="category-item">Voice Assistant Creation: Developed a voice assistant capable of understanding and executing voice commands, providing a hands-free user experience for various tasks.</li>
+            <li class="category-item">Generative AI-powered Meeting Assistant: Designed an AI assistant to support meetings by generating summaries, action points, and contextual information, improving meeting efficiency and follow-up.</li>
+            <li class="category-item">Summarize Private Data with Generative AI: Built a generative AI system to analyze and summarize private data, offering users concise and relevant insights from large datasets.</li>
+            <li class="category-item">Voice-enabled AI Translator Assistant: Created an AI assistant that provides real-time voice translation, facilitating communication across different languages and enhancing user accessibility.</li>
+        </ul>
+        
+        <h2>Optimization Algorithms Projects</h2>
+        <ul class="category">
+            <li class="category-item">ILP Optimization Models: Developed Integer Linear Programming (ILP) optimization models to improve latency, reliability, and bandwidth consumption in NFV-enabled networks, enhancing network performance and efficiency.</li>
+            <li class="category-item">Heuristic Optimization Algorithms: Designed heuristic algorithms that outperform existing solutions in terms of time and space complexity, providing more efficient approaches to complex optimization problems.</li>
+        </ul>
+        
+        <h2>IoT Projects</h2>
+        <ul class="category">
+            <li class="category-item">LoraWAN Private Gateway and End Nodes: Developed LoraWAN private gateways and end nodes tailored for various IoT scenarios, ensuring robust and scalable connectivity solutions for IoT deployments.</li>
+            <li class="category-item">Sigfox Gateway and End Nodes: Implemented Sigfox gateways and end nodes for diverse IoT applications, enabling low-power, wide-area network communication for IoT devices.</li>
+            <li class="category-item">NB-IoT Gateway and End Nodes: Created NB-IoT gateways and end nodes, facilitating narrowband IoT connectivity for enhanced device communication in various IoT scenarios.</li>
+        </ul>
+        
+        <h2>Signal/Image Processing Projects</h2>
+        <ul class="category">
+            <!-- Add details of specific Signal/Image Processing Projects here -->
+        </ul>
+    </ul>
+
+    <h1>Publications</h1>
+    <ul class="publication-list">
+        <li class="publication-item">
+            1. <strong>Service function chaining to support ultra-low latency communication in NFV.</strong><br>
+            Publisher: MDPI- Journal-Electronics 2023.<br>
+            First Author, <a href="https://www.mdpi.com/2079-9292/12/18/3843" target="_blank">Link</a>
+        </li>
+        <li class="publication-item">
+            2. <strong>A novel dynamic service function chaining to enable Ultra-Reliable Low Latency Communication in NFV.</strong> IEEE 2023.<br>
+            Conference: IEEE- The 17th international conference on telecommunications - ConTel2023<br>
+            First Author, <a href="https://ieeexplore.ieee.org/document/10198947" target="_blank">Link</a>
+        </li>
+        <li class="publication-item">
+            3. <strong>A novel reliable low-latency service function chaining to enable URLLC in NFV.</strong><br>
+            Conference: IEEE- The 9th international conference on communications and networking – ComNet2022<br>
+            First Author, <a href="https://ieeexplore.ieee.org/document/9998445" target="_blank">Link</a>
+        </li>
+        <li class="publication-item">
+            4. <strong>Service function chaining to support ultra-low latency communication in NFV.</strong><br>
+            Conference: IEEE- International conference on broadband communications for next generation networks and multimedia – CobCom2022.<br>
+            First Author, <a href="https://ieeexplore.ieee.org/document/9880768" target="_blank">Link</a>
+        </li>
+        <li class="publication-item">
+            5. <strong>Application- and reliability-aware service function chaining to support low-latency applications in an NFV-enabled network.</strong> IEEE 2021.<br>
+            Conference: IEEE- Conference on network function virtualization and software defined networks- NFV-SDN2021<br>
+            First Author, <a href="https://ieeexplore.ieee.org/document/9665118" target="_blank">Link</a>
+        </li>
+        <li class="publication-item">
+            6. <strong>Analysis of LoRaWAN technology in an Outdoor and an Indoor Scenario in Duisburg-Germany.</strong> IEEE 2018.<br>
+            Conference: IEEE- The 3rd international conference on computer and communication systems – ICCCS2018<br>
+            First Author, <a href="https://ieeexplore.ieee.org/document/8463224" target="_blank">Link</a>
+        </li>
+        <li class="publication-item">
+            7. <strong>Identifying immediate family relationship by extraction of parametric models and statistical features of cepstrum of speech signal.</strong><br>
+            Publisher: Open Science Journal of Bioscience and Bioengineering 2015.<br>
+            Fifth Author, <a href="http://www.openscienceonline.com/journal/archive?journalId=705&issueId=7050202" target="_blank">Link</a>
+        </li>
+    </ul>
 </body>
 </html>
