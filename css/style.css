@@ -353,6 +353,22 @@ header {
     }
 }
 
+@media (max-width: 400px) {
+    .services {
+        display: flex;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .service + .service {
+        margin-left: 2em;
+    }
+	
+	.portfolio__item {
+		max-width: 375px;
+	}
+}
 
 .about-me {
     background-color: var(--clr-dark);
