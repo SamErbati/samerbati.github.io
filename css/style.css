@@ -1,3 +1,5 @@
+/* Simply put the following in every project, it makes the padding size */
+
 *,
 *::before,
 *::after {
@@ -10,25 +12,25 @@
     --ff-primary: 'Lora', serif;
     --ff-secondary: 'Roboto Slab', serif;
     
-    --fw-reg: 400;
-    --fw-bold: 700;
+    --fw-reg: 400; /* font weight regular */
+    --fw-bold: 700; /* font weith bold */
     
-    --clr-light: #fff;
+    --clr-light: #fff; /* color changes */
     --clr-dark: #303030;
-    --clr-accent: #11cf70;
+    --clr-accent: #16e0bd;
     
-    --fs-h1: 3rem;
+    --fs-h1: 3rem; /* font size*/
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
-    
+    /*  box shadow  */
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 4.5rem;
+        --fs-h1: 4.5rem; /* Increasing the font sizes for larger screens */
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.3rem;
@@ -53,33 +55,33 @@ body {
 }
 
 section {
-    padding: 5em 2em;
+    padding: 5em 2em; /*top and bottom 5em, right and left 2em */
 }
 
 img {
-    display: block;
-    max-width: 100%;
+    display: block; /* to get rid of some issues that come up with images */
+    max-width: 100%; /* not grow bigger of the size of their parents */
 }
 
 strong { font-weight: var(--fw-bold) }
 
 :focus {
-    outline: 3px solid var(--clr-accent);
-    outline-offset: 3px;
+    outline: 3px solid var(--clr-accent);  /* to increase in size when get focus*/
+    outline-offset: 3px;  /* in case you do a tab, it shows it by a border*/
 }
 
 /* Buttons */
 
 .btn {
     display: inline-block;
-    padding: .5em 2.5em;
+    padding: 1em 2.5em;
     background: var(--clr-accent);
     color: var(--clr-dark);
     text-decoration: none;
     cursor: pointer;
-    font-size: .8rem;
+    font-size: .9rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
 }
@@ -116,13 +118,13 @@ p {
 }
 .section__title {
     margin-bottom: .25em;
-	text-algin: center;
+	
 }
 
 .section__title--intro {
     font-weight: var(--fw-reg);
 }
-
+/* use nested strong tag (or compond selectors) to make sure that Sam Erbati always ends up in its own line*/
 .section__title--intro strong {
     display: block;
 }
@@ -144,6 +146,8 @@ p {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
+	margin-top: 2em;
+	text-align: center;
 	
 }
 
@@ -270,7 +274,7 @@ header {
 }
 
 .section__subtitle--intro {
-    display: inline-block;
+    display: inline-block; /* In small sizes displays set the size of green box exactly the size of the text   */
 }
 
 @media (min-width: 600px) {
@@ -287,18 +291,19 @@ header {
     
     .intro__img {
         grid-area: img;
-        min-width: 250px;
+        min-width: 300px; /*  to make sure the image will not disapear */
         position: relative;
-        z-index: 2;
+        z-index: 2; /*  To make sure that the image comes on top  */
+		border-radius: 50%;
     }    
     
     .section__subtitle--intro {
         align-self: start;
-        grid-column: -1 / 1;
+        grid-column: -1 / 1; /* stretch the greenbox under my name to the entire div */
         grid-row: 2;
         text-align: right;
 		position: relative;
-        left: -1.5em;
+        left: -1.5em; /* left positioning of the green box*/
         width: calc(100% + 1.5em);
     }
 }
@@ -308,8 +313,8 @@ header {
 /*  My services section  */
 
 .my-services {
-    background-color: white;
-    background-image: url(../img/services-bg.jpg);
+    background-color: var(--clr-light);
+    background-image: url(../img/Sam.jpg);
     background-size: cover;
     background-blend-mode: overlay; /* Changed blend mode */
     color: var(--clr-dark); /* Adjusted text color */
@@ -317,18 +322,18 @@ header {
 }
 
 .section__title--services {
-    color: var(--clr-accent);
+    color: var(--clr-dark);
     position: relative;
 }
 
 .section__title--services::after {
     content: '';
-    display: block;
-    width: 2em;
+    display: block; /* The underlying line below my passion*/
+    width: 5em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
-    opacity: 0.25;
+    background: var(--clr-dark);
+    opacity: 0.5;
 }
 
 .services {
@@ -336,7 +341,7 @@ header {
 }
 
 .service {
-    max-width: 500px;
+    max-width: 500px;  /* for small screens, it breaks the line to avoid long sentences in a line */
     margin: 0 auto;
 }
 
@@ -348,27 +353,11 @@ header {
         margin-right: auto;
     }
     
-    .service + .service {
+    .service + .service {  /* adding margin to the left when there is a sibling on the right */
         margin-left: 2em;
     }
 }
 
-@media (max-width: 400px) {
-    .services {
-        display: flex;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .service + .service {
-        margin-left: 2em;
-    }
-	
-	.portfolio__item {
-		max-width: 375px;
-	}
-}
 
 .about-me {
     background-color: var(--clr-dark);
@@ -422,13 +411,14 @@ header {
     text-align: center;    
 }
 
+
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .portfolio__item {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     overflow: hidden;
 }
 
@@ -436,6 +426,10 @@ header {
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
+	width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire grid item */
+    display: block;	
 }
 
 .portfolio__item:focus {
