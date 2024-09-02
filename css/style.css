@@ -1,36 +1,32 @@
-/* Simply put the following in every project, it makes the padding size */
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Custom Properties, update these for your own design */
-
 :root {
     --ff-primary: 'Lora', serif;
     --ff-secondary: 'Roboto Slab', serif;
     
-    --fw-reg: 400; /* font weight regular */
-    --fw-bold: 700; /* font weith bold */
+    --fw-reg: 400; 
+    --fw-bold: 700; 
     
-    --clr-light: #fff; /* color changes */
+    --clr-light: #fff; 
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
     
-    --fs-h1: 3rem; /* font size*/
+    --fs-h1: 3rem; 
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
-    /*  box shadow  */
+
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 4.5rem; /* Increasing the font sizes for larger screens */
+        --fs-h1: 4.5rem; 
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.3rem;
@@ -55,19 +51,19 @@ body {
 }
 
 section {
-    padding: 5em 2em; /*top and bottom 5em, right and left 2em */
+    padding: 5em 2em; 
 }
 
 img {
-    display: block; /* to get rid of some issues that come up with images */
-    max-width: 100%; /* not grow bigger of the size of their parents */
+    display: block; 
+    max-width: 100%; 
 }
 
 strong { font-weight: var(--fw-bold) }
 
 :focus {
-    outline: 3px solid var(--clr-accent);  /* to increase in size when get focus*/
-    outline-offset: 3px;  /* in case you do a tab, it shows it by a border*/
+    outline: 3px solid var(--clr-accent); 
+    outline-offset: 3px; 
 }
 
 /* Buttons */
@@ -107,10 +103,10 @@ h3 { font-size: var(--fs-h3) }
 a {
 	color: #11cf70;
 	font-size: var(--fs-body);
-	text-decoration: none; /* Remove default underline */
-    border-bottom: 2px solid transparent; /* Add a transparent border initially */
-    padding-bottom: 3px; /* Adjust spacing to make room for the border */
-    transition: border-color 0.3s ease; /* Add a smooth transition */
+	text-decoration: none; 
+    border-bottom: 2px solid transparent; 
+    padding-bottom: 3px; 
+    transition: border-color 0.3s ease;
 }
 
 p {
@@ -124,7 +120,7 @@ p {
 .section__title--intro {
     font-weight: var(--fw-reg);
 }
-/* use nested strong tag (or compond selectors) to make sure that Sam Erbati always ends up in its own line*/
+
 .section__title--intro strong {
     display: block;
 }
@@ -291,19 +287,19 @@ header {
     
     .intro__img {
         grid-area: img;
-        min-width: 300px; /*  to make sure the image will not disapear */
+        min-width: 300px; 
         position: relative;
-        z-index: 2; /*  To make sure that the image comes on top  */
-		border-radius: 50%;
+        z-index: 2; 
+	border-radius: 50%;
     }    
     
     .section__subtitle--intro {
         align-self: start;
-        grid-column: -1 / 1; /* stretch the greenbox under my name to the entire div */
+        grid-column: -1 / 1; 
         grid-row: 2;
         text-align: right;
-		position: relative;
-        left: -1.5em; /* left positioning of the green box*/
+	position: relative;
+        left: -1.5em; 
         width: calc(100% + 1.5em);
     }
 }
@@ -316,8 +312,8 @@ header {
     background-color: var(--clr-light);
     background-image: url(../img/Sam.jpg);
     background-size: cover;
-    background-blend-mode: overlay; /* Changed blend mode */
-    color: var(--clr-dark); /* Adjusted text color */
+    background-blend-mode: overlay; 
+    color: var(--clr-dark);
     text-align: center;
 }
 
@@ -328,7 +324,7 @@ header {
 
 .section__title--services::after {
     content: '';
-    display: block; /* The underlying line below my passion*/
+    display: block;
     width: 5em;
     height: 1px;
     margin: 0.5em auto 1em;
@@ -341,7 +337,7 @@ header {
 }
 
 .service {
-    max-width: 500px;  /* for small screens, it breaks the line to avoid long sentences in a line */
+    max-width: 500px;  
     margin: 0 auto;
 }
 
@@ -353,7 +349,7 @@ header {
         margin-right: auto;
     }
     
-    .service + .service {  /* adding margin to the left when there is a sibling on the right */
+    .service + .service { 
         margin-left: 2em;
     }
 }
@@ -428,7 +424,7 @@ header {
         opacity 250ms linear;
 	width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire grid item */
+    object-fit: cover; 
     display: block;	
 }
 
