@@ -407,36 +407,65 @@ header {
     text-align: center;    
 }
 
-
+/* Responsive grid for portfolio items */
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted for smaller screens */
+    grid-gap: 1em; /* Added gap between items */
+    padding: 1em; /* Added padding for smaller screens */
 }
 
+/* Ensure portfolio items fit within grid and don't overflow */
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
+    border-radius: 8px; /* Optional: Add border-radius for better visuals */
 }
 
 .portfolio__img {
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
-	width: 100%;
+    width: 100%;
     height: 100%;
-    object-fit: cover; 
-    display: block;	
+    object-fit: cover; /* Ensures the image covers the entire grid item */
+    display: block;
 }
 
-.portfolio__item:focus {
-    position: relative;
-    z-index: 2;
-}
-
+/* Hover effect */
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
     opacity: .5;
+}
+
+/* Media query for very small screens, like iPhone 12 Mini */
+@media (max-width: 375px) { /* For smaller screens (iPhone 12 Mini) */
+    .portfolio {
+        grid-template-columns: 1fr; /* Display items in a single column */
+    }
+    
+    .portfolio__item {
+        margin-bottom: 1em; /* Add some spacing between items */
+    }
+
+    .portfolio__img {
+        max-width: 100%; /* Ensure image stays within bounds */
+        height: auto; /* Allow image to adjust height responsively */
+    }
+}
+
+/* Adjust grid for slightly larger screens */
+@media (min-width: 600px) {
+    .portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust for medium screens */
+    }
+}
+
+@media (min-width: 800px) {
+    .portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Original size for larger screens */
+    }
 }
 
 
